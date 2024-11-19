@@ -1,18 +1,49 @@
-fascine=int(input("Fascine acquistate: "))
-sacchi=int(input("Sacchi acquistati: "))
-bancali=int(input("Bancali acquistati: "))
-fascine=fascine*5
-sacchi=sacchi*20
-bancali=bancali*50
-tot=fascine+sacchi+bancali
-print(f"Peso totale: {tot} kg")
-prezzo=round(tot*0.8,1)
-print(f"Prezzo della legna senza sconto: {prezzo}0 euro")
-if tot>100:
-  sconto=round(prezzo*0.15,1)
-  prezzo=prezzo-sconto
+anni=int(input("Quanti anni di servizio? "))
+lv=int(input("Qual è il livello del programmatore? "))
+if anni==1:
+    if lv==1:
+        print("Il bonus di produttività è 100.")
+    elif lv==2:
+        print("Il bonus di produttività è 200.")
+    elif lv==3:
+        print("Il bonus di produttività è 300.")
+    else:
+        print("Livello non valido.")
+elif anni>1 and anni<=3:
+    if lv==1:
+        print("Il bonus di produttività è 200.")
+    elif lv==2:
+        print("Il bonus di produttività è 300.")
+    elif lv==3:
+        print("Il bonus di produttività è 400.")
+    else:
+        print("Livello non valido.")
+elif anni>3 and anni<=5:
+    if lv==1:
+        print("Il bonus di produttività è 300.")
+    elif lv==2:
+        print("Il bonus di produttività è 400.")
+    elif lv==3:
+        print("Il bonus di produttività è 500.")
+    else:
+        print("Livello non valido.")
+elif anni>5 and anni<=7:
+    if lv==1:
+        print("Il bonus di produttività è 400.")
+    elif lv==2:
+        print("Il bonus di produttività è 500.")
+    elif lv==3:
+        print("Il bonus di produttività è 600.")
+    else:
+        print("Livello non valido.")
+elif anni>7:
+    if lv==1:
+        print("Il bonus di produttività è 500.")
+    elif lv==2:
+        print("Il bonus di produttività è 600.")
+    elif lv==3:
+        print("Il bonus di produttività è 700.")
+    else:
+        print("Livello non valido.")
 else:
-  sconto=0.00
-print(f"Sconto applicato: {sconto}0 euro")
-print("Spese di trasporto: 3 euro")
-print(f"Prezzo finale su scontrino: {prezzo}0 euro")
+    print("Valore non valido.")
